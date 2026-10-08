@@ -1,0 +1,151 @@
+/* Palette: deep evergreen, moss, bark, cedar, fog, cream. */
+:root {
+  --evergreen: #1f3a2e;
+  --evergreen-deep: #14261e;
+  --moss: #6b7f3a;
+  --bark: #5a3e2b;
+  --cedar: #a2452f;
+  --fog: #d9dbd4;
+  --cream: #f5efe2;
+
+  --bg: var(--cream);
+  --surface: #fbf8f1;
+  --text: #1c2a22;
+  --text-muted: #4a5a50;
+  --accent: var(--cedar);
+  --rule: color-mix(in srgb, var(--bark) 25%, transparent);
+
+  --font-heading: 'Fraunces Variable', Georgia, 'Times New Roman', serif;
+  --font-body: 'Inter Variable', system-ui, -apple-system, 'Segoe UI', sans-serif;
+
+  --measure: 62ch;
+  --gutter: clamp(1rem, 5vw, 2.5rem);
+  --section-space: clamp(3.5rem, 10vw, 6.5rem);
+  --radius: 0.75rem;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  -webkit-text-size-adjust: 100%;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--font-body);
+  font-size: 1.0625rem;
+  line-height: 1.65;
+}
+
+h1,
+h2,
+h3 {
+  font-family: var(--font-heading);
+  font-weight: 600;
+  line-height: 1.15;
+  color: var(--evergreen);
+  text-wrap: balance;
+}
+
+h2 {
+  font-size: clamp(1.75rem, 4vw, 2.5rem);
+  margin: 0 0 1.5rem;
+}
+
+h3 {
+  font-size: 1.3rem;
+  margin: 0 0 0.5rem;
+}
+
+p {
+  margin: 0 0 1rem;
+  max-width: var(--measure);
+}
+
+a {
+  color: var(--accent);
+  text-underline-offset: 0.2em;
+}
+
+a:hover {
+  text-decoration-thickness: 2px;
+}
+
+:focus-visible {
+  outline: 3px solid var(--accent);
+  outline-offset: 3px;
+  border-radius: 2px;
+}
+
+.container {
+  width: 100%;
+  max-width: 68rem;
+  margin-inline: auto;
+  padding-inline: var(--gutter);
+}
+
+.section {
+  padding-block: var(--section-space);
+  border-top: 1px solid var(--rule);
+}
+
+.button {
+  display: inline-block;
+  padding: 0.8rem 1.4rem;
+  border-radius: 999px;
+  background: var(--evergreen);
+  color: var(--cream);
+  font-weight: 600;
+  text-decoration: none;
+  transition: background-color 150ms ease;
+}
+
+.button:hover {
+  background: var(--evergreen-deep);
+}
+
+.button--ghost {
+  background: transparent;
+  color: var(--evergreen);
+  box-shadow: inset 0 0 0 2px var(--evergreen);
+}
+
+.button--ghost:hover {
+  background: color-mix(in srgb, var(--evergreen) 8%, transparent);
+}
+
+.skip-link {
+  position: absolute;
+  left: 1rem;
+  top: -3rem;
+  padding: 0.5rem 1rem;
+  background: var(--evergreen);
+  color: var(--cream);
+  z-index: 10;
+}
+
+.skip-link:focus {
+  top: 1rem;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+}

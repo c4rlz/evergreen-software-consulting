@@ -1,0 +1,64 @@
+---
+import { proof } from '../content/site';
+---
+
+<section class="section" id="work" aria-labelledby="work-title">
+  <div class="container">
+    <h2 id="work-title">Work I can show you</h2>
+    <ul class="list" role="list">
+      {
+        proof.map((p) => (
+          <li class="item">
+            <h3>{p.title}</h3>
+            <p>{p.body}</p>
+            {p.tags.length > 0 && (
+              <ul class="tags" role="list" aria-label="Built with">
+                {p.tags.map((t) => (
+                  <li>{t}</li>
+                ))}
+              </ul>
+            )}
+            {p.href && (
+              <a href={p.href}>
+                {p.linkLabel}
+                <span class="visually-hidden"> ({p.title})</span>
+              </a>
+            )}
+          </li>
+        ))
+      }
+    </ul>
+  </div>
+</section>
+
+<style>
+  .list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: grid;
+    gap: 2.5rem;
+  }
+  .item {
+    padding-left: 1.25rem;
+    border-left: 3px solid var(--moss);
+  }
+  .tags {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 0.75rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.4rem;
+  }
+  .tags li {
+    font-size: 0.8rem;
+    padding: 0.15rem 0.6rem;
+    border-radius: 999px;
+    background: color-mix(in srgb, var(--moss) 15%, transparent);
+    color: var(--evergreen);
+  }
+  .item a {
+    font-weight: 600;
+  }
+</style>

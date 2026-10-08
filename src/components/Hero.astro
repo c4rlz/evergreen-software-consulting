@@ -1,0 +1,71 @@
+---
+import { hero, site } from '../content/site';
+import Treeline from './Treeline.astro';
+---
+
+<header class="hero">
+  <nav class="container nav" aria-label="Primary">
+    <a class="wordmark" href="/">{site.shortName}</a>
+    <a href="#contact">Contact</a>
+  </nav>
+  <div class="container intro">
+    <p class="eyebrow">{site.name}</p>
+    <h1>{hero.tagline}</h1>
+    <p class="sub">{hero.sub}</p>
+    <div class="actions">
+      <a class="button" href="#contact">{hero.cta}</a>
+      <a class="button button--ghost" href="#work">See my work</a>
+    </div>
+  </div>
+  <Treeline />
+</header>
+
+<style>
+  .hero {
+    background: color-mix(in srgb, var(--fog) 45%, var(--cream));
+  }
+  .nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-block: 1.25rem;
+  }
+  .nav a {
+    color: var(--evergreen);
+    font-weight: 600;
+    text-decoration: none;
+  }
+  .nav a:hover {
+    text-decoration: underline;
+  }
+  .wordmark {
+    font-family: var(--font-heading);
+    font-size: 1.35rem;
+  }
+  .intro {
+    padding-block: clamp(2.5rem, 9vw, 6rem) clamp(1.5rem, 5vw, 3rem);
+  }
+  .eyebrow {
+    color: var(--bark);
+    font-weight: 600;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    font-size: 0.85rem;
+    margin-bottom: 0.75rem;
+  }
+  h1 {
+    font-size: clamp(2.1rem, 6.5vw, 4rem);
+    max-width: 18ch;
+    margin: 0 0 1.25rem;
+  }
+  .sub {
+    font-size: 1.15rem;
+    color: var(--text-muted);
+  }
+  .actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    margin-top: 2rem;
+  }
+</style>
