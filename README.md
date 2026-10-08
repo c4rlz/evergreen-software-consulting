@@ -6,7 +6,7 @@ Built with [Astro](https://astro.build) and plain CSS. No client-side JavaScript
 
 ## Run it
 
-Needs Node 22.12+ (`nvm use` picks it up from `.nvmrc`).
+Needs Node 22.12+; developed on Node 26 (`nvm use` picks it up from `.nvmrc`).
 
 ```sh
 npm install
@@ -26,7 +26,7 @@ npm run preview   # serve the built site
 
 ## Deploy
 
-Static output in `dist/`. Works on Netlify or Cloudflare Pages with build command `npm run build` and output directory `dist`; set `NODE_VERSION=22` in the host's environment if it doesn't read `.nvmrc`.
+Static output in `dist/`. Works on Netlify or Cloudflare Pages with build command `npm run build` and output directory `dist`; set `NODE_VERSION=26` in the host's environment if it doesn't read `.nvmrc`.
 
 ## Roadmap
 
