@@ -1,22 +1,20 @@
 ---
 import { services } from '../content/site';
+import Section from './Section.astro';
 ---
 
-<section class="section" id="services" aria-labelledby="services-title">
-  <div class="container">
-    <h2 id="services-title">What I help with</h2>
-    <ul class="grid" role="list">
-      {
-        services.map((s) => (
-          <li class="card">
-            <h3>{s.title}</h3>
-            <p>{s.body}</p>
-          </li>
-        ))
-      }
-    </ul>
-  </div>
-</section>
+<Section id="services" title="What I help with">
+  <ul class="grid" role="list">
+    {
+      services.map((s) => (
+        <li>
+          <h3>{s.title}</h3>
+          <p>{s.body}</p>
+        </li>
+      ))
+    }
+  </ul>
+</Section>
 
 <style>
   .grid {
@@ -24,17 +22,19 @@ import { services } from '../content/site';
     margin: 0;
     padding: 0;
     display: grid;
-    gap: 1.25rem;
-    grid-template-columns: repeat(auto-fit, minmax(min(100%, 15rem), 1fr));
+    gap: 2rem 2.5rem;
   }
-  .card {
-    padding: 1.5rem;
-    background: var(--surface);
-    border: 1px solid var(--rule);
-    border-radius: var(--radius);
+  li {
+    padding-top: 1rem;
+    border-top: 2px solid var(--moss);
   }
-  .card p {
+  p {
     margin: 0;
     color: var(--text-muted);
+  }
+  @media (min-width: 40rem) {
+    .grid {
+      grid-template-columns: 1fr 1fr;
+    }
   }
 </style>

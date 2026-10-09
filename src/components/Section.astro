@@ -1,0 +1,36 @@
+---
+// Shared section frame: heading in a narrow left column on wide screens,
+// content on the right. Stacks on phones.
+interface Props {
+  id: string;
+  title: string;
+  class?: string;
+}
+
+const { id, title, class: className } = Astro.props;
+---
+
+<section class:list={['section', className]} id={id} aria-labelledby={`${id}-title`}>
+  <div class="container frame">
+    <h2 id={`${id}-title`}>{title}</h2>
+    <div class="body"><slot /></div>
+  </div>
+</section>
+
+<style>
+  .frame {
+    display: grid;
+    gap: 1.25rem 3rem;
+  }
+  h2 {
+    margin: 0;
+  }
+  .body {
+    min-width: 0;
+  }
+  @media (min-width: 52rem) {
+    .frame {
+      grid-template-columns: 12rem 1fr;
+    }
+  }
+</style>

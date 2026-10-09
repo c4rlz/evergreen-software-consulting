@@ -1,72 +1,71 @@
 // All site copy and links live here, so editing words never means touching layout.
-// Anything in [brackets] is a placeholder still to be written.
 
 export const site = {
   // Undecided: "Evergreen Software Consulting" or "Evergreen Software Solutions".
   name: 'Evergreen Software Consulting',
   shortName: 'Evergreen',
   description:
-    'Senior full-stack engineer on Vancouver Island. Product builds, AI-assisted workflows, and the backend work underneath them.',
+    'Carly Ewasiuk, senior full-stack engineer. Helping SaaS teams turn rough ideas into clear plans and software that stays healthy long after launch. Remote from Vancouver Island, BC.',
 };
 
 export const hero = {
-  tagline: 'Senior full-stack engineer helping small teams ship [what].',
-  sub: 'Eight-plus years building web products end to end, from the database to the button. Based on Vancouver Island, working remotely.',
+  // Words wrapped in *asterisks* get the italic moss accent.
+  status: 'Taking on contract work · Remote from Vancouver Island, BC',
+  headline: 'From rough idea to *evergreen* software.',
+  sub: 'I’m Carly, a senior full-stack engineer. I help SaaS teams turn rough ideas into clear plans, then build software that stays healthy long after launch.',
   cta: 'Get in touch',
 };
 
 export const services = [
   {
-    title: 'Full-stack product builds',
-    body: 'React and TypeScript on the front, Node and Postgres behind it. I can take a feature from rough idea to deployed and monitored.',
+    title: 'Product engineering',
+    body: 'Features built end to end in React, Next.js, Node and Rails, shipped with tests and monitoring.',
   },
   {
-    title: 'AI and agentic workflows',
-    body: 'Putting Claude and similar tools to work inside real engineering processes, with review checkpoints so people stay in charge of what ships.',
+    title: 'AI workflows',
+    body: 'AI features and agentic dev workflows, with review checkpoints so people stay in charge of what ships.',
   },
   {
-    title: 'Backend, APIs and AWS',
-    body: 'APIs, data models and the infrastructure that keeps them running. Untangling the slow or fragile parts of an existing system.',
+    title: 'Backend and reliability',
+    body: 'APIs, data pipelines and AWS infrastructure, with the tracing and alerts that catch problems early.',
   },
   {
-    title: '[Fourth area, or delete this one]',
-    body: '[One sentence on what you do and what the client gets.]',
+    title: 'Technical leadership',
+    body: 'A former engineering manager who can scope a messy project, coordinate a risky release, and steady a team.',
   },
 ];
 
 export const proof = [
   {
+    title: 'AI topic classification',
+    meta: 'Moz · 2024–2026',
+    body: 'Led the cross-team rollout of AI keyword categorization, and designed the API contracts for a shared AI tracking service used across several apps.',
+  },
+  {
     title: 'ticket2pr',
+    meta: 'Open source · TypeScript, Claude Code',
     href: 'https://github.com/c4rlz/ticket2pr',
-    linkLabel: 'View on GitHub',
-    body: 'A CLI that turns a ticket into an implementation plan you review, then into a draft pull request. The plan checkpoint is the point: catching a wrong approach takes two minutes there instead of an afternoon in a 400-line diff.',
-    tags: ['TypeScript', 'Claude Code', 'GitHub CLI'],
+    body: 'A CLI that turns a ticket into a plan you review, then a draft pull request. A two-minute plan review catches a wrong approach before it becomes a 400-line diff.',
   },
   {
     title: 'Garden Within',
+    meta: 'Side project · Next.js, Prisma, Postgres',
     href: 'https://github.com/c4rlz/garden-within',
-    linkLabel: 'View on GitHub',
     body: 'A cycle-aware journaling app I designed and built solo, with auth, rate limiting and an installable PWA.',
-    tags: ['Next.js', 'React', 'Prisma', 'Postgres'],
-  },
-  {
-    title: '[Past project or outcome, anonymized if needed]',
-    body: '[What the problem was, what you did, and what changed. A number helps if you have one.]',
-    tags: [] as string[],
   },
 ];
 
 export const about = {
   paragraphs: [
-    "I'm Carly. I've spent over eight years as a software developer, most recently as a senior developer at Moz. I like the whole stack, and I like it best when the work has a clear purpose and room to do it properly.",
-    'I live on Vancouver Island and work remotely. [How you like to work: e.g. async-first, clear outcomes over long meetings, small teams.]',
+    'Before software, I was a special education assistant, adapting my approach to each student. I still work that way: meet a team where it is, then figure out what will actually help. Since 2018 I’ve been a full-stack developer, an engineering manager for a team of six, and most recently a senior developer at Moz.',
+    'The thread through all of it is turning ambiguity into a plan. I ask the awkward questions early, write the answers down, and make sure the release everyone is nervous about lands smoothly.',
+    'I work async-first. Agree on the outcome with me and trust me with the how: I plan before I build, raise risks early, and build in tests, docs and monitoring as I go, so your team can own the work after I’ve moved on.',
   ],
 };
 
 export const contact = {
-  intro:
-    'Have a project or a gap on your team? Send me a note with a line or two about it and I’ll reply within a couple of working days.',
-  // Leave empty until the domain email exists; the email link is hidden while it's blank.
+  intro: 'Have a project or a gap on your team? Send me a few lines about it.',
+  // Leave empty until the domain email exists. While blank, LinkedIn is the main button.
   email: '',
   links: [
     { label: 'LinkedIn', href: 'https://www.linkedin.com/in/carly-ewasiuk/' },
